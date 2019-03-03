@@ -110,6 +110,10 @@ Examples
 
         public async Task<TextReader> TranslateAsync(string text, string sourceLang, string targetLang)
         {
+            if (text == null) throw new ArgumentNullException(nameof(text));
+            if (sourceLang == null) throw new ArgumentNullException(nameof(sourceLang));
+            if (targetLang == null) throw new ArgumentNullException(nameof(targetLang));
+
             return new  StreamReader(await _httpClient.Value.GetStreamAsync(new Uri(string.Format(UriFormat, sourceLang, targetLang, text))));
         }
     }
