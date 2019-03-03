@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "polyglot": {
+      "commandName": "Project",
+      "commandLineArgs": "=it Hello Zack!"
+    }
+  }
+}
