@@ -32,7 +32,7 @@ namespace polyglot
             catch (Exception e)
             {
                 Console.ForegroundColor = ConsoleColor.DarkRed;
-                Console.WriteLine(e);
+                Console.WriteLine(e.Message + " " + e.InnerException.Message);
                 Console.ResetColor();
             }
 
